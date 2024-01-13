@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: webpv
+spec:
+  capacity:
+    storage: 500Mi
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    server: 34.125.3.212
+    path: /outside
+    readonly: false
+  persistentvolumeReclaimPolicy: Retain
