@@ -1,0 +1,13 @@
+#This is a file where values are fetched from config files.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testing1
+spec:
+  containers:
+  - name: testing1
+    image: busybox
+    command: ['sh','-c','while true;do echo sleep 2; done;']
+    envFrom:
+    -  configMapRef:
+         name: chethcm
