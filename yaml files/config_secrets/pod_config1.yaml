@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testing
+spec:
+  containers:
+  - name: testing
+    image: busybox
+    command: ['sh','-c','echo am $TEST is here && sleep 20']
+    env:
+      - name: TEST
+        valueFrom:
+          configMapKeyRef:
+            name: chethcm
+            key: age
