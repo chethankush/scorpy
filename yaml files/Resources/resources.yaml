@@ -1,1 +1,17 @@
-asdfasdfasdfasd
+#This file is example for declaring resources like cpu,memory
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-resource
+spec:
+  containers:
+  - name: pod-reource
+    image: busybox
+    command: ['sh','-c','while true;do sleep 5;done']
+    resources:
+      requests:
+        cpu: 100m
+        memory: 64Mi
+      limits:
+        cpu: 200m
+        memory: 128Mi
