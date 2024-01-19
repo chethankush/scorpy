@@ -1,0 +1,10 @@
+#This file is example for config files where key values are stored.
+apiVersion: v1
+data:
+  age: "38"
+  name:  Eswar
+  key: |
+          sndfoasdnosandvnsaodnoasdncasdcasdnasdncasdncoasdnos
+kind: ConfigMap
+metadata:
+  name: chethcm
