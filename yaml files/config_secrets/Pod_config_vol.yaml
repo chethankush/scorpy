@@ -1,0 +1,18 @@
+#This file is example for fetching the data from config files via volumes
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testing3
+spec:
+  containers:
+  - name: testing3
+    image: busybox
+    command: ['sh','-c','while true;do sleep 5;done']
+    volumeMounts:
+    - name: my-vol
+      mountPath: /config
+
+  volumes:
+  - name: my-vol
+    configMap:
+      name : chethcm
