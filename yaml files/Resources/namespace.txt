@@ -1,0 +1,8 @@
+To create namespace
+#kubectl create namespace dev-app
+
+To list details with respect to namespace 
+#kubectl get pods -namespace=dev-app
+
+To set your namespace as default namespace
+#kubectl config set-context --current --namespace=dev-app
