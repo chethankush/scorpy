@@ -1,0 +1,11 @@
+This file is example for deploying POd in specific node
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-deploy
+spec:
+  nodeName: workernode1
+  containers:
+  - name: node
+    image: nginx
+    
