@@ -1,0 +1,35 @@
+#This file is example for declaring resources like cpu,memory
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: pod-resource1
+  labels:
+    app: web
+    type: dev
+  namespace: dev-app
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      type: dev
+      app: web
+
+  template:
+    metadata:
+      labels:
+        app: web
+        type: dev
+    spec:
+      containers:
+      - name: pod-reource
+        image: nginx:1.14.0
+        command: ['sh','-c','while true;do echo chehan && sleep 20;done']
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 100m
+            memory: 64Mi
