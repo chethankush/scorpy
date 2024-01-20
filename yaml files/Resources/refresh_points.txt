@@ -1,0 +1,7 @@
+There are three kinds of Quality of Services
+
+1) Best efforts pods are where no resources are mentioned
+
+2) Burstable pods are limits are higher than requests
+
+3) Guaranteed pod are limits are equal to requests and this highest priroity.
