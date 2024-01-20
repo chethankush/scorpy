@@ -6,3 +6,15 @@ To list details with respect to namespace
 
 To set your namespace as default namespace
 #kubectl config set-context --current --namespace=dev-app
+
+This is the error we get if we try to allocate more then the quota
+root@master:/home/chethankush/projects/practice/resources# kubectl apply -f extra.yaml 
+Error from server (Forbidden): error when creating "extra.yaml": pods "pod-resource3" is forbidden: exceeded quota: resource-quota, requested: pods=1, used: pods=5, limited: pods=5
+
+========================================================================
+
+#This yaml file is to create Namespace with name dev
+apiVersion : v1
+kind: Namespace
+metadata:
+	name: dev
