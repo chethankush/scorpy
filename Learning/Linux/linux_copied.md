@@ -1138,6 +1138,7 @@ A trap is a mechanism that allows the shell to intercept signals sent to a proce
 <details>
 <summary>Every couple of days, a certain process stops running. How can you look into why it's happening?</summary><br><b>
 One way to investigate why a process stops running is to check the system logs, such as the messages in /var/log/messages or journalctl. Additionally, checking the process's resource usage and system load may provide clues as to what caused the process to stop
+  Use the command $dmesg | more to check any errors of the system .
 </b></details>
 
 <details>
