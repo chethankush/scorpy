@@ -1206,6 +1206,8 @@ It is the first process executed by the kernel during the booting of a system. I
 
 <details>
 <summary>Can you describe how processes are being created?</summary><br><b>
+  Please refer to this link which is explained very beautifully. 
+  https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_process_creation_termination.htm
 </b></details>
 
 <details>
