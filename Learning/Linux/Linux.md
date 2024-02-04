@@ -8,7 +8,6 @@ pidstat
 
 <details>
 <summary>How to check disk usage?</summary><br><b>
-
   `iostat -xz 1`
 </b></details>
 
