@@ -8,11 +8,7 @@ pidstat
 
 <details>
 <summary>How to check disk usage?</summary><br><b>
-```bash
-iostat -xz 1
-  ```
+`iostat -xz 1`
 </b></details>
 
-```bash
-sadfsadf
-```
+
