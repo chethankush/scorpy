@@ -5,3 +5,10 @@
 
 pidstat
 </b></details>
+
+<details>
+<summary>How to check disk usage?</summary><br><b>
+```bash
+iostat -xz 1
+  ```
+</b></details>
