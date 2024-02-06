@@ -1355,7 +1355,7 @@ The loopback interface is a special, virtual network interface that your compute
 <details>
 <summary>What is a network namespace? What is it used for?</summary><br><b>
 </b></details>
-
+ This is very good explaination about Linux namespace  -->  https://ramesh-sahoo.medium.com/linux-network-namespace-and-five-use-cases-using-various-methods-f45b1ec5db8f
 <details>
 <summary>How to check if a certain port is being used?</summary><br><b>
 
