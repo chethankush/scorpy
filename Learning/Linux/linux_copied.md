@@ -1358,6 +1358,7 @@ The loopback interface is a special, virtual network interface that your compute
  This is very good explaination about Linux namespace  -->  https://ramesh-sahoo.medium.com/linux-network-namespace-and-five-use-cases-using-various-methods-f45b1ec5db8f
  </b>
 </details>
+<details>
 <summary>How to check if a certain port is being used?</summary><br><b>
 
 One of the following would work:
