@@ -1362,10 +1362,9 @@ The loopback interface is a special, virtual network interface that your compute
 
 One of the following would work:
 
-```
 netstat -tnlp | grep <port_number>
 lsof -i -n -P | grep <port_number>
-```
+
 </b></details>
 
 <details>
