@@ -1342,21 +1342,22 @@ The loopback interface is a special, virtual network interface that your compute
 </b></details>
 
 <details>
-<summary>What the following commands are used for?
+<summary>What the following commands are used for?</summary><br><b>
 
   * ip addr
   * ip route
   * ip link
   * ping
   * netstat
-  * traceroute</summary><br><b>
+  * traceroute<br>
 </b></details>
 
 <details>
 <summary>What is a network namespace? What is it used for?</summary><br><b>
-</b></details>
+
  This is very good explaination about Linux namespace  -->  https://ramesh-sahoo.medium.com/linux-network-namespace-and-five-use-cases-using-various-methods-f45b1ec5db8f
-<details>
+ </b>
+</details>
 <summary>How to check if a certain port is being used?</summary><br><b>
 
 One of the following would work:
