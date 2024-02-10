@@ -1,4 +1,4 @@
-###This file will explain how to configure a kubernetes config file from remote server called as jump server, create config file and login to api-server
+##This file will explain how to configure a kubernetes config file from remote server called as jump server, create config file and login to api-server
 
 
 ## Create certificate and key 
