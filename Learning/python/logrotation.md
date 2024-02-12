@@ -1,4 +1,5 @@
-###This program will perform rotation of logs but only thing is files test1/2/3/4/5.log.gz should be present in the folder
+###Save this file as logrotation.py and execute as $python logrotation.py 
+##This program will perform rotation of logs but only thing is files test1/2/3/4/5.log.gz should be present in the folder
 ```bash
 #!/usr/bin/env python2.7.17
 import os
