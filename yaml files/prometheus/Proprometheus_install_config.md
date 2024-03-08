@@ -1,4 +1,4 @@
-### To Install Prometheus on Linux server
+### To Install Prometheus on Linux server (borrowed from https://medium.com/cloud-native-daily/install-and-configure-prometheus-on-a-linux-server-and-securing-prometheus-api-and-ui-endpoints-ec0439228a26)
 
 Set up Prometheus Binaries
 
@@ -77,4 +77,83 @@ sudo systemctl start prometheus.service
 sudo systemctl status prometheus -l
 ```
 
+### To secure prometheus API and UI endpoints using Basic Auth: (id: admin & passwd: test)
+
+Step 1: Create python script to generate encrypted passwd 
+```bash
+Vi gen-pass.py
+
+import getpass
+import bcrypt
+
+password = getpass.getpass("password: ")
+hashed_password = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+print(hashed_password.decode())
+```
+```bash
+python3 gen-pass.py
+It will prompt for passwd (using test as passwd)
+password:
+$2b$12$hNf2lSsxfm0.i4a.1kVpSOVyBCfIB51VRjgBUyv6kdnyTlgWj81Ay
+```
+Step 2: Creating we.yml
+```bash
+Vi /etc/prometheus/web.yml
+basic_auth_users:
+  admin: $2b$12$hNf2lSsxfm0.i4a.1kVpSOVyBCfIB51VgBUyv6kdnyTlgWj81Ay
+```
+```bash
+chown prometheus:prometheus /etc/prometheus/web.yml
+$ promtool check web-config /etc/prometheus/web.yml
+web.yml SUCCESS
+```
+Step 3: Edit prometheus.yml file
+```bash
+vi /etc/prometheus/prometheus.yml
+global:
+  scrape_interval: 10s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090']
+```
+Step 4: Edit prometheus service
+```bash
+vi /etc/systemd/system/prometheus.service
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+ExecStart=/usr/local/bin/prometheus \
+    --config.file /etc/prometheus/prometheus.yml \  
+    --web.config.file /etc/prometheus/web.yml \
+    --storage.tsdb.path /var/lib/prometheus/ \
+    --web.console.templates=/etc/prometheus/consoles \
+    --web.console.libraries=/etc/prometheus/console_libraries
+
+[Install]
+WantedBy=multi-user.target
+```
+Step 5: Restart prometheus services
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart prometheus.service
+sudo systemctl status prometheus -l
+```
+
+Step 6: Test logging in with below credentials 
+```bash
+http://<prometheus-ip>:9090/graph
+
+Username: admin
+
+Password: test
+```
 
