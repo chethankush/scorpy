@@ -1,3 +1,16 @@
 ### This file will install httpd service, enables and makes sure it is in started state
 
 -
+  name: Install httpd and start the service
+  host: web
+  tasks: 
+   - name: To install httpd
+     yum:
+       name: httpd
+       state: present
+
+   - name: To start the service and enable
+     service:
+       name: httpd
+       enable: true
+       state: started
