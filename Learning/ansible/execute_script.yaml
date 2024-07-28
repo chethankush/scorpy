@@ -1,0 +1,16 @@
+### To create file output.txt , copy to remote servers, execute the script and remvoe the script from the remote location 
+
+- name: To capture vmstat command output to /root/output.txt
+  hosts: web
+  remote_user: root
+  tasks:
+   - name: create and check if the file is present
+     command: touch /root/output.txt
+   - name: copy the script to location
+     copy: src=execute.py dest=/root/execute.py mode=775
+   - name: to execute the script
+     command: python execute.py
+   - name: remove python script from server
+     file:
+       path: /root/execute.py
+       state: absent
