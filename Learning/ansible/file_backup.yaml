@@ -27,6 +27,11 @@
       path: /root/backup/backup.sh
       state: absent
 
+   - name: to restart the services 
+     service: 
+      name: httpd
+      state: restarted
+
 
 ***************************
 backup.sh
