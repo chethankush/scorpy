@@ -1,0 +1,36 @@
+-
+  name: To take back of the files
+  hosts: web
+  remote_user: root
+  tasks: 
+   - name: create and check if the folder is present
+     file:
+      path: /root/backup
+      state: directory
+      owner: root
+      group: sys
+      mode: 0775
+  
+   - name: To copy file
+     copy: 
+      src: /root/practice/backup.sh
+      dest: /root/backup/
+      mode: 0775
+      owner: root
+      group: sys
+  
+   - name: To execute script
+     command: sh /root/backup.backup.sh
+
+   - name: To remove script from clients
+     files:
+      path: /root/backup/backup.sh
+      state: absent
+
+
+***************************
+backup.sh
+
+#!/bin/sh
+
+cp -r /home/devops/*  /root/backup/ 
