@@ -1,0 +1,19 @@
+-
+  name: To take back of the files
+  hosts: web
+  remote_user: root
+  tasks: 
+   - name: create and check if the folder is present
+     file:
+      path: /root/backup
+      state: directory
+      owner: root
+      group: sys
+      mode: 0775
+  
+   - name: To copy file
+     command: cp -r /home/devops/{{ item }}  /root/backup/{{ item }}
+     with_items:
+       - "files1"
+       - "files2"
+       - "files3"
