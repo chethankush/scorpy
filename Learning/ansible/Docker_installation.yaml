@@ -1,0 +1,33 @@
+-
+  name: To install docker files
+  hosts: web
+  remote_user: root
+  tasks: 
+  - name: To install docker files using yum
+    yum:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      - yum-utils
+      - device-mapper-persistent-data
+      - lvm2
+  
+  - name: Add docker repo
+    command: 'yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo'
+
+  - name: Install Docker
+    package:
+      name: "{{ item }}"
+      state: latest
+    with_items:
+      - docker-ce
+      - docker-ce-cli
+      - contianerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+
+  - name: Start Docker service
+    service:
+      name: docker
+      state: started
+      enabled: yes
