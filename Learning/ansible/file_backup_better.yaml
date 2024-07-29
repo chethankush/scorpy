@@ -17,3 +17,9 @@
        - "files1"
        - "files2"
        - "files3"
+
+   - name: to copy files using copy module
+     copy: src=/home/devops/{{ item }} dest=/root/backup/ remote_src=yes directory_mode=yes
+     with_items:
+      - "files1"
+      - "files2"
