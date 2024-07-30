@@ -1,0 +1,15 @@
+-
+  name: To install docker files
+  hosts: web
+  become: true
+  tasks:
+    - name: To add group before creating user
+      group:
+        name: wheel
+        state: present
+    - name: To add user to the server
+      user:
+        name: Rahul
+        groups: wheel
+        append: yes
+    
