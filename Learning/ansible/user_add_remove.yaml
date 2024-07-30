@@ -12,4 +12,8 @@
         name: Rahul
         groups: wheel
         append: yes
+    - name: To remove user from the server
+      user: 
+        name: chethan
+        state: absent
     
