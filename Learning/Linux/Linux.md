@@ -38,7 +38,7 @@ lvcreate  -l 100%FREE -n lv_name vg_name
 
 mkfs.xfs /dev/diskname
 
- vim /etc/fstab
+ vim /etc/fstab<br>
  /dev/diskname  /root/filename  xfs defaults    0   0
 </b>
 </details>
