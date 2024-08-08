@@ -17,6 +17,12 @@ Easily and quickly scale the systems you automate through a modular design that 
 When the system is in the state your playbook describes Ansible does not change anything, even if the playbook runs multiple times.
 
 ```
+```bash
+Playbook: A sing;le yaml file
+play: Defines a set of activities(tasks) to be run on hosts
+task: An actions to be performed on the host e.q- script, command, install a package
+```
+
 
 
 ## commands
@@ -25,6 +31,7 @@ When the system is in the state your playbook describes Ansible does not change 
 # ansible all -m ping
 # ansible-playbook file.yaml --syntax-check
 # ansible-playbook file.yaml
+# ansible-playbook -i inventory file_name
 ```
 
 
