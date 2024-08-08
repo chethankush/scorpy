@@ -1,0 +1,25 @@
+---
+- name: To create filesystem
+  hosts: web
+  remote_user: root
+
+  tasks:
+    - name: To create directory
+      command: mkdir /root/datafile
+  
+    - name: To create lv
+      command: lvcreate -L 500M -n datalv datavg
+
+    - name: To create filesystem
+      command: mkfs.xfs /dev/datavg/datalv
+
+    - name: To update in filesystem
+      ansible.bultin.lineinfile:
+        path: /etc/fstab
+        line: "/dev/datavg/datalv /root/datafile  xfs defaults  0 0"
+    
+    - name: Mount the filesystem
+      command: mount -a
+    
+    - name: Unmount the filesystem(if anyone is in filesystem path, it throw error and will not unmount)
+      command: umount /root/datafile
