@@ -18,7 +18,7 @@ When the system is in the state your playbook describes Ansible does not change 
 
 ```
 ```bash
-Playbook: A sing;le yaml file
+Playbook: A single yaml file
 play: Defines a set of activities(tasks) to be run on hosts
 task: An actions to be performed on the host e.q- script, command, install a package
 ```
