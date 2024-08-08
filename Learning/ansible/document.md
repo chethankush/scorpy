@@ -1,6 +1,6 @@
-### This document provide overview on ansible
+## This document provide overview on ansible
 
-## ansible princibles
+### ansible princibles
 ```bash
 As automation technology, Ansible is designed around the following principles:
 
@@ -28,8 +28,8 @@ When the system is in the state your playbook describes Ansible does not change 
 ```
 
 
-### Most important are modules. 
-## Commonly used modules are 
+## Most important are modules. 
+### Commonly used modules are 
 ```bash
 1) copy
 2) File
