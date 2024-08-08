@@ -25,4 +25,19 @@ When the system is in the state your playbook describes Ansible does not change 
 # ansible all -m ping
 # ansible-playbook file.yaml --syntax-check
 # ansible-playbook file.yaml
-``` 
+```
+
+
+### Most important are modules. 
+## Commonly used modules are 
+```bash
+1) copy
+2) File
+3) shell
+4) package Mgt
+5) service
+6) debug
+7) lineinfile
+8) git
+9) archive
+10) cli_command
