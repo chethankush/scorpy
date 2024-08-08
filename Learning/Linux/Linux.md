@@ -24,3 +24,24 @@ pidstat
 `
 </b></details>
 
+<details>
+<summary>How to create files system</summary><br><b>
+mkdir -p /root/filename
+
+pvcreate  /dev/diskname
+
+vgcreate vg_name /dev/diskname
+
+lvcreate -L +330G -n lv_name vg_name
+
+lvcreate  -l 100%FREE -n lv_name vg_name
+
+mkfs.xfs /dev/diskname
+
+ vim /etc/fstab
+ /dev/diskname  /root/filename  xfs defaults    0   0
+</b>
+</details>
+
+
+
