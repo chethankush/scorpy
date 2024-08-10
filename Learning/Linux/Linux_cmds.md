@@ -22,7 +22,32 @@ updatedb : Update the database used by locate.
 
 find /path -type f -exec grep -l "pattern" {} + : Search for files containing a specific pattern using find and grep.
 ```
+### User and group command
+```bash
+useradd : Create a new user account
 
+passwd : Set or change a user's password
+
+groupadd : Create a new group
+
+cat /etc/passwd : Display the contents of the password file
+
+cat /etc/group : Display the contents of the group file
+
+useradd -g groupname username : Create a user and assign them to a specific primary group
+
+usermod -G : Modify a user's supplementary groups
+
+usermod -a -G : Add a user to additional groups without removing them from their current groups
+
+userdel : Delete a user account
+
+userdel -r user : Delete a user account along with their home directory and mail spool
+
+groupdel : Delete a group
+
+useradd -g : Create a user and assign them to a specific primary group
+```
 
 ### System commands
 ```bash
