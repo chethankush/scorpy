@@ -1,0 +1,15 @@
+---
+- name: To check and create users using loop
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: To check for user and create if not
+    user:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - devops
+      - student
+      - games
+      - chethan
