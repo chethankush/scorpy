@@ -59,6 +59,24 @@ systemctl cat service : Display a service's unit file.
 systemctl get-default : Retrieve the default target or run-level for system boot.
 
 systemctl mask service : Mask a service unit, preventing it from starting.
+
+reboot : Restart the system
+
+shutdown -r now : Shutdown and restart the system immediately
+
+systemctl reboot : Restart the system using systemctl
+
+init 6 : Change the system runlevel to reboot
+
+shutdown -h now : Shutdown the system immediately
+
+systemctl shutdown : Shutdown the system using systemctl
+
+init 0 : Change the system runlevel to halt
+
+ctrl +s : Pause terminal output
+
+ctrl+q : Resume terminal output
 ```
 
 ### Network Manager
