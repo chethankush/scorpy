@@ -34,3 +34,18 @@ systemctl get-default : Retrieve the default target or run-level for system boot
 
 systemctl mask service : Mask a service unit, preventing it from starting.
 ```
+
+### Network Manager
+```bash
+nmcli connection show : Show details of all network connections.
+
+nmcli connection up connection_name : Activate a network connection.
+
+nmcli connection down connection_name : Deactivate a network connection.
+
+nmcli connection add type ethernet ifname eth0 : Add a new Ethernet connection.
+
+nmcli connection modify connection_name ipv4.method manual ipv4.addresses 'IP/Subnet' ipv4.gateway 'Gateway' : Configure a static IP address for a connection.
+
+nmcli connection delete connection_name : Delete a network connection.
+```
