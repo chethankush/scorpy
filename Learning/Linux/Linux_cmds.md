@@ -22,6 +22,39 @@ updatedb : Update the database used by locate.
 
 find /path -type f -exec grep -l "pattern" {} + : Search for files containing a specific pattern using find and grep.
 ```
+### Process management
+```bash
+ps : Display information about active processes.
+
+ps aux : Display detailed information about all processes.
+
+top : Display a dynamic, real-time overview of system processes.
+
+kill PID : Terminate a process by its process ID.
+
+killall process_name : Terminate all processes with a specific name.
+
+pkill process_name : Send a signal to processes based on their name.
+
+pgrep process_name : Display process IDs based on their name.
+
+kill -9 PID : Forcefully terminate a process by its process ID.
+
+htop : An interactive process viewer with a user-friendly interface.
+
+nice command : Execute a command with a modified scheduling priority.
+
+renice priority PID : Change the priority of an already running process.
+
+nohup command & : Run a command that keeps running even after the terminal is closed.
+
+kill -STOP PID : Pause (stop) a process by sending the SIGSTOP signal.
+
+kill -CONT PID : Resume a paused (stopped) process by sending the SIGCONT signal.
+
+```
+
+
 ### User and group command
 ```bash
 useradd : Create a new user account
