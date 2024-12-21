@@ -46,3 +46,31 @@ def guess(x):
 
 guess(20)
 ```
+
+### Computer will guess your number in 4-5 guesses
+```bashimport random
+
+def guess(x):
+    low = 1
+    high = x
+    function = 'a'
+    print("Am so brilliant that I can guess your number in 4 guesses")
+    
+    while function != 'y':
+        number = random.randint(low,high)
+        function = input(f"Is this your number {number}:  ")
+        if function == 'n':
+            function = input(f"Is the number higher or lower:   ")
+            if function == 'h':
+                low = number + 1
+            elif function == 'l':
+                high = number - 1
+            else:
+                print("enter correct key")
+    
+    print(f"I got your number -->   {number}")
+    
+
+guess(50)
+
+```
