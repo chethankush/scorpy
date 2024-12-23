@@ -1,0 +1,10 @@
+---
+- name: changing permissions
+  hosts: web
+
+  tasks:
+   - name: File name permissions
+     file:
+       path: /home/chethan/file_chethan
+       mode: 0775
+  
