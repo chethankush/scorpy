@@ -8,3 +8,34 @@
        path: /home/chethan/file_chethan
        mode: 0775
   
+------------------------------------------------------------------------------
+
+---
+- name: Create and remove files
+  hosts: web
+
+  tasks:
+   - name: creating a directory
+     file:
+       path: /home/chethan/playbooks
+       owner: chethan
+       group: sys
+       mode: 0775
+       state: directory
+   
+   - name: To create file in a directory
+     file:
+        path: /home/chethan/playbooks/touchdown
+        owner: root
+        group: chethan
+        mode: 0775
+        state: touch
+   - name: Remove directory
+     file:
+       path: /home/chethan/playbooks
+       state: absent
+
+   - name: Remove File
+     file:
+       path: /home/chethan/file_chethan
+       state: absent
