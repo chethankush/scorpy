@@ -22,18 +22,39 @@ Playbook: A single yaml file
 play: Defines a set of activities(tasks) to be run on hosts
 task: An actions to be performed on the host e.q- script, command, install a package
 ```
-
+## Ansible Configuration files
+```bash
+/etc/ansible/ansible.cfg   ----> ansible configuration file
+/etc/ansible/hosts         ----> ansible inventory where groups and servers are declared
+/etc/ansible/roles
+```
 
 
 ## commands
 ```bash
-# ansible all --list-hosts
-# ansible all -m ping
-# ansible-playbook file.yaml --syntax-check
-# ansible-playbook file.yaml
-# ansible-playbook -i inventory file_name
-```
 
+# ansible-playbook --syntax-check playbook.yaml  ----> Check the syntax
+
+# anible-playbook --check/-C playbook.yaml  ---> performs dry run doesnt execute
+
+# anible-playbook /path/playbook.yaml   ---> executing playbook in a given path
+
+# ansible -m ping localhost  ---> executing without playbook (Ad-joc command)
+
+# ansible-inventory --list  ----> to list all hosts
+
+# ansible remote_host/group_name =m ping 
+
+```
+## To connect remote server without password authentication 
+```bash
+SSH keys from control to client for password connection 
+
+#ssh-keygen
+#Leave everything and then enter
+#ssh-copy-id destination_ipaddress
+#provide passwd for destination _ipaddress
+```
 
 ## Most important are modules. 
 ### Commonly used modules are 
