@@ -29,7 +29,12 @@
         owner: root
         group: chethan
         mode: 0775
-        state: touch
+        state: touch   
+    - name: Adding text for the file
+      blockinfile:
+        path: /home/chethan/playbooks/touchdown
+        block: Chethan is writing this program with the help instructor so that we could all learn and become experts in Ansible.
+
    - name: Remove directory
      file:
        path: /home/chethan/playbooks
