@@ -4,5 +4,5 @@ This book is about a middle age woman who is psychiatrist called Dr Nikki Robert
 ```
 ## Atomic Habit by James clear -- {Still reading}
 ```bash
-Wonderfully articulated about human habits and their results, objective of this book is every tiny habit matters good habit leads to good behaviour and bad one leads to worst
+This book does a great job explaining how our habits shape our lives. It shows that even small habits can make a big difference. Good habits lead to good behavior, while bad ones can cause trouble. The main idea is that every little habit counts, no matter how small it seems.
 ```
