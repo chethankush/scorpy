@@ -1,12 +1,12 @@
 ##This is will unlimited guess
 ```bash
-import random
+import random 
 
 def guess(x):
     random_number = random.randint(1,x)
     number = 0
 
-    print(f" you have {choice} guesses to be winner:")
+    print(" you have unlimited guesses to be winner:")
 
     while number != random_number:
         number = int(input(f"Guess a number within 1 to {x} : "))
@@ -14,9 +14,10 @@ def guess(x):
             print("number is lower ")
         elif number > random_number:
             print("number is higher ")
-    print("Sorry!!, better luck next time")
+    print(f"yay!!, you won , the number is {number} ")
 
 guess(20)
+
 ````
 
 ##This is with 3 limit guess
