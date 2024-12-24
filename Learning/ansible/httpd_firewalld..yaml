@@ -1,0 +1,28 @@
+## To enable Firewalld please install ansible posix
+#ansible-galaxy collection install ansible.posix
+
+---
+- name: Install httpd and start the service
+  hosts: web
+  tasks: 
+  - name: To install httpd
+    yum:
+      name: httpd
+      state: present
+
+  - name: To start the service and enable
+    service:
+      name: httpd
+      enabled: true
+      state: started
+        
+  - name: To open port 80 for http access
+    ansible.posix.firewalld:
+      service: http
+      permanent: true
+      state: enabled
+    
+  - name: Restart firewalld service to load firewall changes
+    service:
+      name: firewalld
+      state: reloaded
