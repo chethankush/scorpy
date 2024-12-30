@@ -62,6 +62,11 @@ Handlers are the executed at the end of the play once all tasks are finished. In
 Note: Handlers are tasks  that only run when notified
 ```
 
+## Conditions
+```bash
+Condition execution allow ansible to take actions on its own based on certain conditions. Condition certain values must be met before executing a tasks
+```
+
 ## Most important are modules. 
 ### Commonly used modules are 
 ```bash
