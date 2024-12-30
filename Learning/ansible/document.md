@@ -56,6 +56,12 @@ SSH keys from control to client for password connection
 #provide passwd for destination _ipaddress
 ```
 
+## Handlers
+```bash
+Handlers are the executed at the end of the play once all tasks are finished. In Ansible, handlers are typically used to start, reload, restart and stio services.
+Note: Handlers are tasks  that only run when notified
+```
+
 ## Most important are modules. 
 ### Commonly used modules are 
 ```bash
