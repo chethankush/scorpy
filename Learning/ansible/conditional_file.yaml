@@ -1,0 +1,17 @@
+---
+- name: Install telnet on redhat only
+  hosts: web
+  tasks:
+  - name: To install telnet on Ubuntu
+    apt:
+        name: telnet
+        state: present
+    when: ansible_os_family == "Ubuntu"
+
+  - name: To install telnet on Redhat
+    yum:
+        name: telnet
+        state: present
+    when: ansible_os_family == "RedHat"
+
+
