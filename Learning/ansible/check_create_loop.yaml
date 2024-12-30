@@ -13,3 +13,17 @@
       - student
       - games
       - chethan
+
+
+==========================================================================================================================
+
+---
+- name: To create users 
+  hosts: web
+  vars:
+    users: [tom, dick, harry]
+  tasks: 
+  - name: To create users
+    user:
+        name: '{{ item }}'
+    with_items:  '{{ users }}'
