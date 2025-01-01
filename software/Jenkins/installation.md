@@ -10,6 +10,11 @@ OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
 OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
 ``````
 
+## Set port to 8081
+```bash
+[Service]
+Environment="JENKINS_PORT=8081"
+```
 ### Next is the Jenkins installation  on Linux Ubuntu 
 
 ```bash
