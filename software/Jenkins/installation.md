@@ -27,3 +27,10 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 ```
+
+## Jenkins master and slave  set-up
+```bash
+master - install java and jenkins
+slave - install java, which is enough
+https://www.jenkins.io/blog/2022/12/27/run-jenkins-agent-as-a-service/
+```
