@@ -28,7 +28,13 @@ task: An actions to be performed on the host e.q- script, command, install a pac
 /etc/ansible/hosts         ----> ansible inventory where groups and servers are declared
 /etc/ansible/roles
 ```
-
+## Ansible installation
+```bash
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+```
 
 ## commands
 ```bash
