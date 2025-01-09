@@ -13,7 +13,7 @@ You will get prompt then type as below
 #exit
 ```
 
-## For redhat
+## For ubuntu
 ```bash
 shift+Esc  button same time
 
