@@ -13,5 +13,5 @@ eg: docker import - chethan:nginx < nginx_chethan.tar
 eg: docker save nginx:chethan > nginx_chethan.tar
 
 5) #docker load     ------> create a image from tarfile
-eg: docker load - chethan:nginx < nginx_chethan.tar
+eg: docker load < nginx_chethan.tar
 ```
