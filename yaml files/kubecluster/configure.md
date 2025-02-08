@@ -55,7 +55,7 @@ vim config
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority-data: {base64 coded certificate}
+    certificate-authority-data: {base64 coded certificate using command #base64 ca.crt -w 0 > encoded_file.crt}
                 OR
     certificate-authority: path of the ca.crt
     server: https://IP-address:6443
