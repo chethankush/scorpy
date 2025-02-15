@@ -1,4 +1,4 @@
-# This project is about communication or logging from one container to another one.
+# 1) This project is about communication or logging from one container to another one.
 ```bash
 Steps:
 1) Create containers c1 and c2 where openssh-server and client is installed accordingly with ubuntu base
